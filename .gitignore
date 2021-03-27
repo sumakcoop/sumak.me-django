@@ -1,0 +1,7 @@
+# virtual environment
+/.env
+# python stuff
+__pycache__/
+# testing database
+/sumakMe/db.sqlite3
+
