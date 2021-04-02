@@ -1,17 +1,17 @@
 """
  This file is part of Sumak.me-django
  Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
- 
+
  Sumak.me-django is free software: you can redistribute it and/or modify
  it under the terms of the GNU Affero General Public License as
  published by the Free Software Foundation, either version 3 of the
  License, or (at your option) any later version.
- 
+
  Sumak.me-django is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU Affero General Public License for more details.
- 
+
  You should have received a copy of the GNU Affero General Public License
  along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
 """
@@ -39,7 +39,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'd+(i2gk_u4jfs#bu4yaw6@sl)7n%7es9l2=grc_nh7bk+4my$5'
+SECRET_KEY = 'TODO: TO BE CONFIGURED IN PRODUCTION'
+# added, needed?
+SITE_ID = 1
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,6 +94,7 @@ INSTALLED_APPS = [
     'oscar.apps.dashboard.shipping.apps.ShippingDashboardConfig',
 
     # 3rd-party apps that oscar depends on
+    'widget_tweaks',
     'haystack',
     'treebeard',
     'sorl.thumbnail',
@@ -202,3 +205,8 @@ HAYSTACK_CONNECTIONS = {
         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
     },
 }
+
+# email SMTP, temporary to stdout
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
