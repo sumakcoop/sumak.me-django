@@ -17,20 +17,30 @@ contact us by email or open an issue if interested.
 # first steps
 ## clone the repository
 ## set a virtual environment
-in Debian/Ubuntu, installed by:<br/>
+in Debian/Ubuntu, installed by:
+```
  sudo apt install virtualenv
-afterwards in the cloned project folder <br/>
+```
+afterwards in the cloned project folder
+```
  virtualenv -p /usr/bin/python3 .env
-and use it! <br/>
+```
+and use it!
+```
  source .env/bin/activate
+```
 ## install requirements
+```
  pip install -r requirements.txt
+```
 ## runserver and test
+```
  python manage.py runserver
-navigate to http://localhost:8000<br/>
+```
+navigate to http://localhost:8000
 
 # copyright
- Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
+Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
 
 # license
 ```
