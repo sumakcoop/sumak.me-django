@@ -14,6 +14,21 @@ contact us by email or open an issue if interested.
 + implement tests.
 + ...
 
+# first steps
+## clone the repository
+## set a virtual environment
+in Debian/Ubuntu, installed by:
+ sudo apt install virtualenv
+afterwards in the cloned project folder
+ virtualenv -p /usr/bin/python3 .env
+and use it!
+ source .env/bin/activate
+## install requirements
+ pip install -r requirements.txt
+## runserver and test
+ python manage.py runserver
+navigate to http://localhost:8000
+
 # copyright
  Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
 
