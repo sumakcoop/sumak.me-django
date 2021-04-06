@@ -62,7 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
 
-    'oscar.config.Shop',
+    # 'oscar.config.Shop',
     'oscar.apps.analytics.apps.AnalyticsConfig',
     'oscar.apps.checkout.apps.CheckoutConfig',
     'oscar.apps.address.apps.AddressConfig',
@@ -92,6 +92,9 @@ INSTALLED_APPS = [
     'oscar.apps.dashboard.vouchers.apps.VouchersDashboardConfig',
     'oscar.apps.dashboard.communications.apps.CommunicationsDashboardConfig',
     'oscar.apps.dashboard.shipping.apps.ShippingDashboardConfig',
+
+    # forked and SUMAK apps
+    'sumakMe',
 
     # 3rd-party apps that oscar depends on
     'widget_tweaks',
@@ -208,5 +211,3 @@ HAYSTACK_CONNECTIONS = {
 
 # email SMTP, temporary to stdout
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
