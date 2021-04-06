@@ -2,7 +2,7 @@
 It's intended to be a marketplace application based on django and django-oscar
 It could become the default one for the Sumak project!
 
-# How participate
+# How can you participate
 Well, we are under heavy construction and design, only internal docs for the moment.
 Feel free to participate!
 contact us by email or open an issue if interested.
@@ -12,7 +12,7 @@ contact us by email or open an issue if interested.
 + use Sumak css.
 + cute frontpage.
 + implement tests.
-...
++ ...
 
 # copyright
  Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
