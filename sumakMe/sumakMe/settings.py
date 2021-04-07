@@ -209,3 +209,8 @@ HAYSTACK_CONNECTIONS = {
 
 # email SMTP, temporary to stdout
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# oscar settings
+OSCAR_SHOP_NAME = 'SUMAK'
+OSCAR_SHOP_TAGLINE = 'Súmate: revierte tu cesta de la compra en proyectos sociales y medioambientales'
+OSCAR_HOMEPAGE = ''
