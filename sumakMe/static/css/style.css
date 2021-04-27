@@ -1,0 +1,132 @@
+/*
+ This file is part of Sumak.me-django
+ Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
+
+ Sumak.me-django is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ Sumak.me-django is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Affero General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
+*/
+@charset "UTF-8";
+.contacts-top {
+    background-color: rgb(0, 130, 136);
+    background-color: #395A5B;
+    position: relative;
+    padding: 10px 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #fff;
+    box-sizing: border-box;
+    height: 40px;
+    display: block;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+
+.contacts-top a{ color: #eee; }
+
+.contacts-top a:hover{ color: #fff; }
+
+.contacts-top .uk-button-text{
+	padding-bottom: 3px;
+}
+
+.contacts-top .container{
+    width: 1230px;
+}
+
+.contacts-top .contacts-left{
+    float: left; display: block;
+    line-height:20px;
+}
+.contacts-top .contacts-left a:hover{
+    text-decoration: none; cursor: auto;
+}
+
+.contacts-top .contacts-right{
+    float: right; display: block;
+    line-height:20px;
+}
+
+.contacts-top ul{ padding-left:0; margin:0; list-style: none; }
+
+.contacts-top .contacts-right ul li {
+    float: left; margin-right: 15px;
+}
+
+.contacts-top .contacts-right ul li:last-child {
+    float: left; margin-right: 0px;
+}
+
+.contacts-top .contacts-right ul li a{
+    color: #fff; text-decoration: none;
+
+}
+
+.contacts-top .contacts-right ul li a i.dashicons{
+    font-size: 13.13px;
+    line-height: 22px;
+    margin-right: 3px;
+}
+
+.nav {
+	position: absolute;
+	top: 15px;
+	z-index: 99;
+	left: 0;
+	right: 0;
+}
+.uk-sticky-placeholder {
+	height: 0 !important;
+}
+.top-wrap::before, .overlay-wrap::before {
+	position: absolute;
+	top:0;
+	right:0;
+	left: 0;
+	bottom: 0;
+	content: '';
+	z-index: 1;
+	background-color: rgba(0,0,0,0.1);
+}
+.top-wrap-height {
+	height: 80vh;
+	min-height: 460px;
+	transition: height 0.25s;
+}
+.uk-subnav-pill > * > :first-child {
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.top-container {
+	z-index: 2;
+}
+.uk-logo img {
+	height: 38px;
+}
+.subtitle-text {
+	font-size: 1.2em;
+	opacity: 0.7;
+	font-weight: 300;
+}
+.logos-grid img {
+	display: block;
+	width: 160px;
+	margin: 0 auto;
+	filter:  grayscale(100%);
+	transition: filter 0.25s;
+}
+.logos-grid img:hover {
+	display: block;
+	width: 160px;
+	margin: 0 auto;
+	filter:  grayscale(0);
+}

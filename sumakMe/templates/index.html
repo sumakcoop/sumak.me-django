@@ -15,5 +15,531 @@
  You should have received a copy of the GNU Affero General Public License
  along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
 -->
-# index.html
 {% extends 'base.html' %}
+{% load static %}
+{% block layout %}
+    <div class="contacts-top uk-text-uppercase">
+        <div class="uk-container">
+            <div class="contacts-left">
+                <div class="navbar">
+                    <ul id="menu-top-menu">
+                        <li>
+                            <a href=""><span>{{ shop_tagline }}</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contacts-right">
+                <div class="navbar">
+
+                    <ul id="menu-top-menu-icons" class="uk-light">
+                        <!-- <li>
+                            <a href="https://serviciodecorreo.es/">
+                                <span><i class="dashicons dashicons-lock" aria-hidden="true"></i><span>Área privada</span></span>
+                            </a>
+                        </li> -->
+
+                        <!-- <li>
+                            <a class="uk-button-text" href="tel:+">
+                                <i class="dashicons dashicons-phone" aria-hidden="true"></i><span></span>
+                            </a>
+                        </li> -->
+                        <li>
+                            <span uk-icon="mail"></span>
+                            <a class="uk-button-text uk-margin-small-left" href="mailto:info@sumakcoop.org">
+                                <span>info@sumakcoop.org</span>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- <span uk-icon="happy"></span> -->
+                            <a class="uk-button-text uk-margin-small-left" href="#">
+                                <span>Súmate</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- TOP -->
+<div class="top-wrap uk-position-relative uk-light">
+    <!-- NAV -->
+    <div class="nav" data-uk-sticky="cls-active: uk-background-secondary uk-box-shadow-medium; top: 100vh; animation: uk-animation-slide-top">
+        <div class="uk-container">
+            <nav class="uk-navbar uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+                <div class="uk-navbar-left">
+                    <div class="uk-navbar-item uk-padding-remove-horizontal">
+                        <a class="uk-logo" title="Logo" href=""><img src="{% static 'images/logo-sumak-blanco-web.png' %}" alt=" " width="150"></a>
+                    </div>
+                </div>
+
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@s">
+                        <!-- <li class="uk-active uk-visible@m"><a href="" data-uk-icon="home"></a></li> -->
+                        <li><a href="#proyecto" data-uk-scroll="duration: 1000">Proyecto</a></li>
+                        <li><a href="" data-uk-scroll="duration: 1000">Objetivos</a></li>
+                        <li>
+                            <!-- <a href="#" data-uk-icon="chevron-down">Proyecto</a> -->
+                            <!-- <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="#">Big Data</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                    <li><a href="#">Analytics</a></li>
+                                    <li><a href="#">AI Lab</a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                        <li><a href="#sumate" data-uk-scroll="duration: 1000">Colabora</a></li>
+                    </ul>
+                    <a class="uk-navbar-toggle uk-navbar-item uk-hidden@s" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav"></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- /NAV -->
+
+    <div class="uk-cover-container uk-light uk-flex uk-flex-middle top-wrap-height">
+
+        <!-- TOP CONTAINER -->
+        <div class="uk-container uk-flex-auto top-container uk-position-relative uk-margin-medium-top" data-uk-parallax="y: 0,50; easing:0; opacity:0.2">
+            <div class="uk-width-1-1@s uk-text-center" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 150">
+                <!-- <h6 class="uk-text-primary uk-margin-small-bottom">RESEARCH</h6> -->
+                <h1 class="uk-margin-remove-top">Súmate.</h1>
+                <p class="subtitle-text">Únete a la red de productores, artesanos, comercios y entidades sociales <br> comprometidas con la transformación social y medioambiental. </p>
+            </div>
+            <div class="uk-flex-center uk-text-center" uk-grid>
+                <div>
+                    <a href="#proyecto" data-uk-scroll="duration: 1000" title="Conoce el proyecto sumak.me" class="uk-button uk-button-primary uk-border-rounded" data-uk-scrollspy-class="uk-animation-fade">Conoce el proyecto <span class="uk-text-lowercase">sumak.me</span></a>
+                </div>
+                <div>
+                    <a href="#adhesion" data-uk-scroll="duration: 1000" title="Muestra tu apoyo al proyecto sumak.me" class="uk-button uk-button-default uk-border-rounded" data-uk-scrollspy-class="uk-animation-fade">Muestra tu apoyo</a>
+                </div>
+            </div>
+        </div>
+        <!-- /TOP CONTAINER -->
+        <!-- TOP IMAGE -->
+        <!-- REAL <img src="{% static 'images/annie-spratt-kr_88BakygA-unsplash.jpg' %}" alt="" data-uk-cover data-uk-img data-uk-parallax="opacity: 1,0.1; easing:0"> -->
+        <!-- FAKE -->
+        <img src="{% static 'images/1280px-CrookMarketJune2010.jpg' %}" alt="" data-uk-cover data-uk-img data-uk-parallax="opacity: 1,0.1; easing:0"> -->
+        <!-- /TOP IMAGE -->
+    </div>
+    <div class="uk-position-bottom-center uk-position-medium uk-position-z-index uk-text-center">
+        <a href="#content" data-uk-scroll="duration: 500" data-uk-icon="icon: arrow-down; ratio: 2"></a>
+    </div>
+</div>
+<!-- /TOP -->
+
+<!--
+<section id="proyecto" class="uk-section uk-flex uk-flex-middle data-uk-parallax="y: 0,50; easing:0; opacity:0.2"" >
+    <div class="uk-container uk-margin-large-top">
+
+        <div class="uk-child-width-1-3@s uk-grid-large" uk-grid>
+            <div>
+                <h2 class="uk-h2 uk-text-muted uk-margin-small-bottom">El proyecto</h2>
+                <p class="uk-text-lead uk-text-light"><strong>sumak.me</strong> es un proyecto de <strong>plataforma web</strong> online con el objetivo de crear una red de consumo de proximidad, ético, ecológico y sostenible, con responsabilidad social y medioambiental</p>
+            </div>
+        <div class="uk-margin-top">
+                <span uk-icon="icon: cart; ratio: 2"></span>
+                <h3>Marketplace</h3>
+                <p>Plataforma de venta online y distribución de productos, con el objetivo de apoyar e impulsar la venta online de productos locales. </p>
+            </div>
+            <div class="uk-margin-top">
+                <span uk-icon="icon: heart; ratio: 2"></span>
+                <h3>Crowdfunding</h3>
+                <p>Plataforma de financiación colectiva, con el objetivo de articular un modo de revertir el impacto ambiental y apoyar proyectos de carácter eco-social, de sensibilización, educativos, etc.</p>
+            </div>
+        </div>
+
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-width-1-2">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/online-world-pana.svg" alt="" data-uk-img>
+            </div>
+        </div>
+    </div>
+
+</section>
+-->
+
+<section id="proyecto" class="uk-section uk-flex uk-flex-middle data-uk-parallax="y: 0,50; easing:0; opacity:0.2"" >
+    <div class="uk-container uk-container-small uk-text-center">
+<h6 class="uk-text-muted uk-margin-small-bottom uk-text-uppercase">El proyecto</h6>
+        <p class="uk-text-lead uk-text-light"><strong>sumak.me</strong> es un proyecto de <strong>plataforma web</strong> online con el objetivo de crear una <strong>red de consumo de proximidad, ético, ecológico y sostenible, con responsabilidad social y medioambiental.</strong></p>
+        <!-- <p class="subtitle-text">
+            sumak.me es un proyecto de plataforma web
+        </p> -->
+        <div class="uk-grid uk-child-width-1-2@s uk-text-left uk-margin-large-top uk-margin-large-bottom" data-uk-grid>
+            <div>
+                <span uk-icon="icon: cart; ratio: 2"></span>
+                <h3 class="uk-margin-small-top">Marketplace</h3>
+                <p>Plataforma de venta online y distribución, con el objetivo de apoyar e impulsar el comercio local y un consumo ecológico y sostenible. </p>
+                <!-- <p><a class="uk-button uk-button-text" href="">Ver más.</a></p> -->
+            </div>
+            <div>
+                <span class="" uk-icon="icon: heart; ratio: 2"></span>
+                <h3 class="uk-margin-small-top">Crowdfunding</h3>
+                <p>Plataforma de financiación colectiva, con el fin de articular un modo de revertir el impacto ambiental y apoyar proyectos de carácter eco-social, de sensibilización, educativos, etc.</p>
+                <!-- <p><a class="uk-button uk-button-text" href="">Ver más.</a></p> -->
+            </div>
+        </div>
+
+        <div class="uk-margin uk-flex-center uk-text-center" uk-grid>
+            <div>
+                <a href="#sumate" title="Participar en el proyecto sumak.me" class="uk-button uk-button-primary uk-border-rounded" data-uk-scroll="duration: 1000">Quiero participar</a>
+            </div>
+            <div>
+                <a href="#quienes" data-uk-scroll="duration: 1000" title="Acerca de la asociación SUMAK" class="uk-button uk-button-default uk-border-rounded" data-uk-scrollspy-class="uk-animation-fade">Cuéntame más</a>
+            </div>
+        </div>
+
+
+                <!-- <a href="../publications" title="Publications" class="uk-margin-left uk-button uk-button-default">View publications</a> -->
+            </p>
+
+            <div class="uk-flex uk-flex-center">
+                <div class="uk-width-1-1">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/online-world-pana.svg" alt="" data-uk-img>
+        </div>
+            </div>
+    </div>
+</section>
+
+<section class="uk-section" style="background: #b6dccf;">
+    <div class="uk-container uk-container-small">
+        <!-- <div class="uk-child-width-expand@s" uk-grid> -->
+        <div>
+                <h2 class="uk-h4 uk-text-uppercase">¿Sabías que...?</h2>
+                <p class="subtitle-text" style="color: #FFF;" >El nombre SUMAK está inspirado en el neologismo <i>Sumak kawsay</i>, una expresión quechua referida a la cosmovisión ancestral de la vida y a la realización ideal y hermosa del planeta, así como de una vida digna, en plenitud, equilibrio y armonía, buscando el "bien común" y la responsabilidad social.</p>
+            </div>
+        <!-- <div>
+
+            </div> -->
+        <!-- </div> -->
+    </div>
+</section>
+
+<section id="content" class="uk-section uk-section-default" style="background: #FFF;">
+    <div class="uk-container">
+        <div class="uk-section uk-section-small uk-padding-remove-top">
+            <ul class="uk-subnav uk-subnav-pill uk-flex uk-flex-center" data-uk-switcher="connect: .uk-switcher; animation: uk-animation-fade">
+                <li><a class="uk-border-rounded" href="#">Quién</a></li>
+                <li><a class="uk-border-rounded" href="#">Objetivos</a></li>
+                <li><a class="uk-border-rounded" href="#">Cómo</a></li>
+            </ul>
+        </div>
+
+        <ul class="uk-switcher uk-margin">
+            <li>
+                <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
+                    <div data-uk-scrollspy-class="uk-animation-slide-right-medium">
+                        <!-- <h6 class="uk-text-primary uk-text-uppercase">Quiénes somos</h6> -->
+                        <h6 class="uk-text-uppercase">Quiénes somos</h6>
+                        <h2 class="uk-margin-small-top">Somos una asociación cooperativa sin ánimo de lucro</h2>
+                        <p class="subtitle-text">Somos personas comprometidas con el <i>sumak kawsay</i> e ilusionadas en explorar nuevos modelos de consumo más respetuosos y sostenibles desde una mirada holística, social, cooperativa y solidaria.
+                        </p>
+
+                </div>
+                <div>
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/Community-pana.svg" alt="" data-uk-img>
+                </div>
+            </li>
+            <li>
+                <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
+                    <div data-uk-scrollspy-class="uk-animation-slide-right-medium">
+                        <h6 class="">MAIN REASONS</h6>
+                        <h2 class="uk-margin-small-top">Take decisions with real time data based on users interaction.</h2>
+                        <p class="subtitle-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation.
+                        </p>
+                    </div>
+                    <div class="uk-text-center">
+                        <img src="img/3254895.png" alt="">
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
+                    <div data-uk-scrollspy-class="uk-animation-slide-right-medium">
+                        <h6 class="uk-text-primary">MAIN REASONS</h6>
+                        <h2 class="uk-margin-small-top">Take decisions with real time data based on users interaction.</h2>
+                        <p class="subtitle-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation.
+                        </p>
+
+                        <!-- <div class="uk-grid uk-child-width-1-2@s" data-uk-grid>
+                            <div>
+                                <h4>Great stuff</h4>
+                                <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. <a href="">Learn more.</a></p>
+                            </div>
+                            <div>
+                                <h4>Data analysis</h4>
+                                <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. <a href="">Learn more.</a></p>
+                            </div>
+                        </div> -->
+
+                    </div>
+                    <div class="uk-text-center">
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/supermarket-workers-pana.svg" alt="" data-uk-img>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</section>
+
+<section id="" class="uk-section uk-section-muted" >
+    <div class="uk-container">
+        <div class="uk-grid uk-child-width-1-1@l uk-flex-middle" data-uk-grid data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
+        <div data-uk-scrollspy-class="uk-animation-slide-right-medium">
+            <!-- <h6 class="uk-text-primary uk-text-uppercase">Objetivos</h6> -->
+            <h2>Objetivos</h2>
+                <div class="uk-column-1-1">
+                    <p>
+                        <ul class="uk-list subtitle-text" style="color: #333 !important;">
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Apoyar el comercio local y de cercanía, desde el cooperativismo agroecológico y en el marco de la economía social y solidaria.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Conectar personas y organizaciones, generando un punto de encuentro para la investigación, creación y desarrollo de iniciativas que puedan englobarse en la economía transformadora, decrecentista o en el desarrollo sostenible.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Aumentar la visibilidad de proyectos e iniciativas de alimentación sostenible así como de carácter social, facilitando el salto de escala.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Favorecer el acceso a la alimentación sostenible de las personas en situación de vulnerabilidad.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Impulsar un consumo responsable y justo, minimizando su impacto ambiental incidiendo y trabajando activamente y de forma colaborativa en la eficiencia energética y de recursos de los procesos de producción, distribución y venta.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Fomentar el desarrollo rural y su puesta en valor para evitar la pérdida de población en núcleos rurales.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Integrar en la acción de consumir una responsabilidad social que pueda revertir en pequeñas organizaciones sin ánimo de lucro, realizando de esta forma micromecenazgo y ejerciendo un efecto positivo en el entorno socioambiental.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Desarrollar una herramienta tecnológica basada en los principios de software libre, garantizando la libertad de usar, estudiar, distribuir y mejorar el código fuente, permitiendo la posibilidad de replicar el proyecto y de participar activamente en él.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Ofrecer una herramienta que se pueda interconectar con otras y que pueda trabajar de forma federada en multitud de instancias que se puedan adaptar al territorio donde se implante. Disponiendo de documentación técnica de instalación y funcionamiento de forma actualizada y bajo licencias libres.</li>
+                            <li><span class="uk-margin-small-right" uk-icon="check"></span>Integrar a las distintas iniciativas, actores y usuarios en la gobernanza del proyecto, a partir de los principios de la economía social y solidaria, la innovación social, la participación y la transparencia.</li>
+
+                        </ul>
+                    </p>
+                </div>
+            <p class="uk-margin-large uk-text-center">
+                <a href="#adhesion" data-uk-scroll="duration: 1000" title="Carta de adhesión" class="uk-button uk-button-primary uk-border-rounded" data-uk-scrollspy-class="uk-animation-fade">Quiero participar</a>
+                <a href="#" data-uk-scroll="duration: 1000" title="Conoce el proyecto sumak.me" class="uk-button uk-button-default uk-border-rounded uk-margin-left" data-uk-scrollspy-class="uk-animation-fade">Sobre el proyecto sumak.me</a>
+            </p>
+        </div>
+        <div class="uk-text-center">
+            <p>
+                <img src="img/Farmer-pana.svg" data-src="img/Farmer-pana.svg" alt="" width="400" data-uk-img>
+            </p>
+            <p>
+                <img src="img/Charity-bro.svg" data-src="img/Charity-bro.svg" alt="" width="400" data-uk-img >
+            </p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!--
+<section class="uk-cover-container overlay-wrap">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://picsum.photos/640/650/?image=770 640w,
+    https://picsum.photos/960/650/?image=770 960w,
+    https://picsum.photos/1200/650/?image=770 1200w,
+    https://picsum.photos/2000/650/?image=770 2000w"
+    data-sizes="100vw"
+    data-src="https://picsum.photos/1200/650/?image=770" alt="" data-uk-cover data-uk-img
+    >
+    <div class="uk-container uk-position-z-index uk-position-relative uk-section uk-section-xlarge uk-light">
+        <div class="uk-grid uk-flex-right">
+
+            <div class="uk-width-2-5@m" data-uk-parallax="y: 50,-50; easing: 0; media:@l">
+                <h6>TESTIMONIALS</h6>
+                <div class="uk-position-relative uk-visible-toggle uk-light" data-uk-slider="easing: cubic-bezier(.16,.75,.47,1)">
+                    <ul class="uk-slider-items uk-child-width-1-1">
+                        <li>
+                            <div data-uk-slider-parallax="opacity: 0.2,1,0.2">
+                                <h2 class="uk-margin-small-top">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"</h2>
+                                <p class="uk-text-meta">Lorena Smith, founder of Some Cool Startup</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-uk-slider-parallax="opacity: 0.2,1,0.2">
+                                <h2 class="uk-margin-small-top">"Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"</h2>
+                                <p class="uk-text-meta">Lorena Smith, founder of Some Cool Startup</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-uk-slider-parallax="opacity: 0.2,1,0.2">
+                                <h2 class="uk-margin-small-top">"Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"</h2>
+                                <p class="uk-text-meta">Lorena Smith, founder of Some Cool Startup</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="uk-slider-nav uk-dotnav uk-margin-top"><li></li></ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+-->
+<!-- BOTTOM -->
+<section id="sumate" class="uk-section uk-section-default">
+
+    <div class="uk-container uk-container-xsmall uk-text-center uk-section uk-padding-remove-top">
+        <h5 class="uk-text-bold uk-text-uppercase">Súmate</h5>
+        <h2 class="uk-margin-remove uk-text-light">Participa en el proyecto sumak.me</h2>
+        <hr class="uk-divider-small">
+    </div>
+    <div class="uk-container">
+        <div class="uk-grid uk-grid-large uk-child-width-1-3@m" data-uk-grid data-uk-scrollspy="target: > div; delay: 150; cls: uk-animation-slide-bottom-medium">
+            <div class="uk-text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/Scrum board-pana.svg" data-uk-img alt="Image">
+                <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Proceso y diseño participativo</h4>
+                <p>24/7 support. We’re always here for you no matter what time of day.</p>
+            </div>
+
+            <div class="uk-text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/supermarket-workers-pana.svg" data-uk-img alt="Image">
+                <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Compra online productos locales</h4>
+                <p>Del productor directamente al consumidor</p>
+            </div>
+
+            <div class="uk-text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/Online-Groceries-pana.svg" data-uk-img width="240" alt="Image">
+                <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Distribución de productos</h4>
+                <p>24/7 support. We’re always here for you no matter what time of day.</p>
+            </div>
+
+            <div class="uk-text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/Taking care of the Earth-pana.svg" data-uk-img alt="Image">
+                <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Medición de impacto social y medioambiental</h4>
+                <p>24/7 support. We’re always here for you no matter what time of day.</p>
+            </div>
+
+
+            <div class="uk-text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/Business-Plan-pana.png" data-uk-img alt="Image">
+                <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">ERP y herramientas de análisis de datos</h4>
+                <p>24/7 support. We’re always here for you no matter what time of day.</p>
+            </div>
+
+            <div class="uk-text-center">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/Team-spirit-bro.svg" data-uk-img alt="Image">
+                <h4 class="uk-margin-small-bottom uk-margin-top uk-margin-remove-adjacent">Software libre</h4>
+                <p>Código abierto y libre.</p>
+            </div>
+
+        </div>
+
+        <!-- <div class="uk-flex-center uk-text-center" uk-grid> -->
+
+        <div class="uk-flex-center uk-text-center uk-margin-large">
+            <hr>
+            <h3>¿Quieres sumarte?</h3>
+            <!-- <div>
+                <a href="#proyecto" data-uk-scroll="duration: 1000" title="Conoce el proyecto sumak.me" class="uk-button uk-button-primary uk-border-rounded" data-uk-scrollspy-class="uk-animation-fade">Conoce el proyecto</a>
+            </div> -->
+            <div>
+                <a href="#adhesion" data-uk-scroll="duration: 1000" title="Muestra tu apoyo al proyecto sumak.me" class="uk-button uk-button-primary uk-border-rounded" data-uk-scrollspy-class="uk-animation-fade">Muestra tu apoyo</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- BOTTOM -->
+<!-- LOGOS -->
+<div class="uk-section uk-section-small uk-section-muted">
+    <div class="uk-container uk-container-small">
+        <div class="uk-grid uk-child-width-1-3 uk-child-width-expand@m logos-grid" data-uk-grid data-uk-scrollspy="cls: uk-animation-scale-down; target: > div > img; delay: 100">
+            <div>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/logo-pixelada.png" data-uk-img alt="Image">
+            </div>
+            <div>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/logo-elalambre.png" data-uk-img alt="Image">
+            </div>
+            <div>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/logo-autonomiasur.png" data-uk-img alt="Image">
+            </div>
+
+            <div>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/logo-hoolistica.png" data-uk-img alt="Image">
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /LOGOS -->
+<!-- FOOTER -->
+<footer class="uk-section uk-section-secondary uk-padding-remove-bottom">
+    <div class="uk-container">
+        <!--
+        <div class="uk-grid uk-grid-large" data-uk-grid>
+            <div class="uk-width-1-2@m">
+                <h5>SUMAK</h5>
+                <p>: <a href="mailto:info@sumakcoop.org" title="">info@sumakcoop.org</a></p>
+                <div>
+                    <a href="" class="uk-icon-button" data-uk-icon="twitter"></a>
+                    <a href="" class="uk-icon-button" data-uk-icon="facebook"></a>
+                    <a href="" class="uk-icon-button" data-uk-icon="instagram"></a>
+                </div>
+            </div>
+            <div class="uk-width-1-6@m">
+                <h5>PRODUCTS</h5>
+                <ul class="uk-list">
+                    <li>Big Data</li>
+                    <li>Marketing</li>
+                    <li>Analytics</li>
+                    <li>AI Lab</li>
+                </ul>
+            </div>
+            <div class="uk-width-1-6@m">
+                <h5>OUR COMPANY</h5>
+                <ul class="uk-list">
+                    <li>Team</li>
+                    <li>Work</li>
+                    <li>Culture</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="uk-width-1-6@m">
+                <h5>OUR OFFICES</h5>
+                <ul class="uk-list">
+                    <li>London</li>
+                    <li>Chicago</li>
+                    <li>Dubai</li>
+                    <li>Brussels</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+-->
+    <div class="uk-text-center uk-padding uk-padding-remove-horizontal">
+        <span class="uk-text-small uk-text-muted">© 2021 Asociación cooperativa SUMAK | <a href="https://github.com/zzseba78/Kick-Off">Thanks to KickOff</a> | Built with <a href="http://getuikit.com" title="Visit UIkit 3 site" target="_blank" data-uk-tooltip><span data-uk-icon="uikit"></span></a></span>
+    </div>
+</footer>
+<!-- /FOOTER -->
+<!-- OFFCANVAS -->
+<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: false">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+        <button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li class="uk-parent">
+                <a href="#">Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="#">Sub item</a></li>
+                    <li><a href="#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-nav-header">Header</li>
+            <li><a href="#js-options"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: table"></span> Item</a></li>
+            <li><a href="#"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: thumbnails"></span> Item</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#"><span class="uk-margin-small-right uk-icon" data-uk-icon="icon: trash"></span> Item</a></li>
+        </ul>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+</div>
+<!-- /OFFCANVAS -->
+{% endblock %}
+{% block scripts%}
+    <!-- JS FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@latest/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@latest/dist/js/uikit-icons.min.js"></script>
+{% endblock%}

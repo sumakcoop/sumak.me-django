@@ -21,3 +21,10 @@
 {% block favicon %}
     <link rel="shortcut icon" type="image/png" href="{% static "images/favicon.png" %}" />
 {% endblock %}
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/uikit@latest/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?{% now "U" %}" />
+{% endblock %}
+{% block title %}
+    {{ shop_tagline }} - {{ shop_name }}
+{% endblock %}
