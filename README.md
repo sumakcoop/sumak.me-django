@@ -33,6 +33,16 @@ and use it!
 ```
  pip install -r requirements.txt
 ```
+## migrate database and check static files
+```
+python manage.py makemigrations
+```
+```
+python manage.py migrate
+```
+```
+python manage.py collectstatic
+```
 ## runserver and test
 ```
  python manage.py runserver
