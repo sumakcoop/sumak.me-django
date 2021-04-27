@@ -4,4 +4,6 @@
 __pycache__/
 # testing database
 /sumakMe/db.sqlite3
+#static
+/static_cdn
 
