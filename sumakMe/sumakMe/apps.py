@@ -28,4 +28,6 @@ class MyShop(config.Shop):
             if u.pattern.regex == re.compile('^catalogue/'):
                 urls[index].pattern.regex = re.compile('^catalogo/')
                 break
+        for index, u in enumerate(urls):
+            print(index, ':', u)
         return urls
