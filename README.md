@@ -1,15 +1,14 @@
 # Sumak.me (django version)
-It's intended to be a marketplace application based on django and django-oscar
+It's intended to be a marketplace application based on django and django-oscar<br/>
 It could become the default one for the Sumak project!
 
 # How can you participate
 Perfect!
-Take a look at SUMAK's phylosophy and objectives. [here](./docs/dossier_breve.pdf)
-Take a look at our roadmap, and open issues. (or open new ones)
+Take a look at SUMAK's phylosophy and objectives. [here](./docs/dossier_breve.pdf) <br/>
+Take a look at our [roadmap](./docs/roadmap.md), and open issues. (or open new ones)
 
 # first steps
-take a look at our [installing docs](./docs/installing.md), and [first steps](./docs/first_steps.md).
-take a glance at our [roadmap](./docs/roadmap.md)
+take a look at our [installing docs](./docs/installing.md), and [first steps](./docs/first_steps.md).<br/>
 Ask for help if you find any trouble!
 
 
