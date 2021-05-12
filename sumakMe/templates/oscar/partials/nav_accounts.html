@@ -1,0 +1,90 @@
+<!--
+ This file is part of Sumak.me-django
+ Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
+
+ Sumak.me-django is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ Sumak.me-django is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Affero General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
+-->
+{% load static %}
+{% load i18n %}
+<div class="contacts-top uk-text-uppercase">
+    <div class="uk-container">
+        <div class="contacts-left">
+            <div class="navbar">
+                <ul id="menu-top-menu">
+                    <li>
+                        <a href=""><span>{{ shop_tagline }}</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="contacts-right">
+            <div class="navbar">
+
+                <ul id="menu-top-menu-icons" class="uk-light">
+                    <!-- <li>
+                        <a href="https://serviciodecorreo.es/">
+                            <span><i class="dashicons dashicons-lock" aria-hidden="true"></i><span>Área privada</span></span>
+                        </a>
+                    </li> -->
+
+                    <!-- <li>
+                        <a class="uk-button-text" href="tel:+">
+                            <i class="dashicons dashicons-phone" aria-hidden="true"></i><span></span>
+                        </a>
+                    </li> -->
+                    {% if user.is_authenticated %}
+                    {% block nav_account_navbar_authenticated %}
+                        <li class="nav-item mr-2">
+                            {% if num_unread_notifications > 0 %}
+                                {# If user has new notifications - we change account link to go to inbox #}
+                                <a href="{% url 'customer:notifications-inbox' %}" class="uk-button-text uk-margin-small-left mt-2 mt-lg-0">
+                                    <i class="far fa-user mr-2"></i>
+                                    {% trans "Account" %}
+                                    <span class="badge badge-warning">{{ num_unread_notifications }}</span>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'customer:summary' %}" class="uk-button-text uk-margin-small-left mt-2 mt-lg-0">
+                                    <i class="far fa-user mr-2"></i>
+                                    {% trans "Account" %}
+                                </a>
+                            {% endif %}
+                        </li>
+                        {% if user.is_staff or perms.partner.dashboard_access %}
+                            <li class="nav-item mr-2">
+                                <a href="{% url 'dashboard:index' %}" class="uk-button-text uk-margin-small-left">
+                                    <i class="fas fa-list-ul mr-2"></i>
+                                    {% trans "Dashboard" %}
+                                </a>
+                            </li>
+                        {% endif %}
+                        <li class="nav-item mr-2">
+                            <a id="logout_link" href="{% url 'customer:logout' %}" class="uk-button-text uk-margin-small-left">
+                                <i class="fas fa-sign-out-alt mr-2"></i>
+                                {% trans "Logout" %}
+                            </a>
+                        </li>
+                    {% endblock %}
+                    {% else %}
+                        <li class="nav-item mr-2">
+                            <a id="login_link" href="{% url 'customer:login' %}" class="uk-button-text uk-margin-small-left">
+                                <i class="fas fa-sign-in-alt mr-2"></i>
+                                {% trans "Login or register" %}
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
