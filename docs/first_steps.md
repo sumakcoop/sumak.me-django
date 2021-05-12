@@ -1,16 +1,15 @@
-# Sumak.me (django version)
-It's intended to be a marketplace application based on django and django-oscar
-It could become the default one for the Sumak project!
+# First steps
 
-# How can you participate
-Perfect!
-Take a look at SUMAK's phylosophy and objectives. [here](./docs/dossier_breve.pdf)
-Take a look at our roadmap, and open issues. (or open new ones)
-
-# first steps
-take a look at our [installing docs](./docs/installing.md), and [first steps](./docs/first_steps.md).
-take a glance at our [roadmap](./docs/roadmap.md)
-Ask for help if you find any trouble!
+## create a super user
+```
+python manage.py createsuperuser
+```
+you'll use it for managing the app as admin
+## execute and enjoy!
+```
+ python manage.py runserver
+```
+navigate to http://localhost:8000
 
 
 # copyright
@@ -34,6 +33,3 @@ Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
  You should have received a copy of the GNU Affero General Public License
  along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
 ```
-
-
-

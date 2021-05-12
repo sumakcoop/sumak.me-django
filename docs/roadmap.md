@@ -1,16 +1,22 @@
-# Sumak.me (django version)
-It's intended to be a marketplace application based on django and django-oscar
-It could become the default one for the Sumak project!
+# ROADMAP
 
-# How can you participate
-Perfect!
-Take a look at SUMAK's phylosophy and objectives. [here](./docs/dossier_breve.pdf)
-Take a look at our roadmap, and open issues. (or open new ones)
+## version 0.1.0
+The objective is to have a full catalogue of companies and products.
+Buying not available.
+Structure done for companies and shops.
+postgresql, migrations, and autotests implemented.
+heavy work in documentation about usage, administration and development.
 
-# first steps
-take a look at our [installing docs](./docs/installing.md), and [first steps](./docs/first_steps.md).
-take a glance at our [roadmap](./docs/roadmap.md)
-Ask for help if you find any trouble!
+### tasks
+
+#### appearance
+(TODO LIST...)
+
+#### database and data model
+(TODO LIST...)
+
+#### tests
+(TODO LIST...)
 
 
 # copyright
@@ -34,6 +40,3 @@ Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
  You should have received a copy of the GNU Affero General Public License
  along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
 ```
-
-
-
