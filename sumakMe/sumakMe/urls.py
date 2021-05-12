@@ -39,5 +39,5 @@ from web import views as web_index
 
 urlpatterns = [
     path('', include(apps.get_app_config('oscar').urls[0])),
-    path('index.html', web_index.index, name="home"),
+    path('index.html', web_index.index, name="index"),
 ]
