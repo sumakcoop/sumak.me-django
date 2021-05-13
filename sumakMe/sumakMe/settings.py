@@ -218,4 +218,4 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # oscar settings
 OSCAR_SHOP_NAME = 'SUMAK'
 OSCAR_SHOP_TAGLINE = 'Red de consumo de proximidad, ético, ecológico y sostenible con responsabilidad social y medioambiental'
-OSCAR_HOMEPAGE = '/index.html'
+# OSCAR_HOMEPAGE = 'home'
