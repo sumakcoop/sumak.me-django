@@ -1,6 +1,5 @@
 # virtual environment
-/.env
-/sumakMe/.env
+.env/
 # python stuff
 __pycache__/
 # testing database
