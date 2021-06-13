@@ -1,4 +1,4 @@
-<!--
+{% comment "license header" %}
  This file is part of Sumak.me-django
  Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
 
@@ -14,36 +14,21 @@
 
  You should have received a copy of the GNU Affero General Public License
  along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
--->
+ {% endcomment %}
 {% load static %}
 {% load i18n %}
 <div class="contacts-top uk-text-uppercase">
     <div class="uk-container">
         <div class="contacts-left">
-            <div class="navbar">
-                <ul id="menu-top-menu">
-                    <li>
-                        <a href=""><span>{{ shop_tagline }}</span></a>
-                    </li>
-                </ul>
-            </div>
+            <ul id="menu-top-menu">
+                <li>
+                    <a href=""><span>{{ shop_tagline }}</span></a>
+                </li>
+            </ul>
         </div>
         <div class="contacts-right">
-            <div class="navbar">
-
-                <ul id="menu-top-menu-icons" class="uk-light">
-                    <!-- <li>
-                        <a href="https://serviciodecorreo.es/">
-                            <span><i class="dashicons dashicons-lock" aria-hidden="true"></i><span>Área privada</span></span>
-                        </a>
-                    </li> -->
-
-                    <!-- <li>
-                        <a class="uk-button-text" href="tel:+">
-                            <i class="dashicons dashicons-phone" aria-hidden="true"></i><span></span>
-                        </a>
-                    </li> -->
-                    {% if user.is_authenticated %}
+            <ul id="menu-top-menu-icons" class="uk-light">
+                {% if user.is_authenticated %}
                     {% block nav_account_navbar_authenticated %}
                         <li class="nav-item mr-2">
                             {% if num_unread_notifications > 0 %}
@@ -75,16 +60,15 @@
                             </a>
                         </li>
                     {% endblock %}
-                    {% else %}
-                        <li class="nav-item mr-2">
-                            <a id="login_link" href="{% url 'customer:login' %}" class="uk-button-text uk-margin-small-left">
-                                <i class="fas fa-sign-in-alt mr-2"></i>
-                                {% trans "Login or register" %}
-                            </a>
-                        </li>
-                    {% endif %}
-                </ul>
-            </div>
+                {% else %}
+                    <li class="nav-item mr-2">
+                        <a id="login_link" href="{% url 'customer:login' %}" class="uk-button-text uk-margin-small-left">
+                            <i class="fas fa-sign-in-alt mr-2"></i>
+                            {% trans "Login or register" %}
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>            
         </div>
     </div>
 </div>
