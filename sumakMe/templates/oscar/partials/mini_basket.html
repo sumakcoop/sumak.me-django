@@ -1,0 +1,38 @@
+{% comment "license header" %}
+ This file is part of Sumak.me-django
+ Copyright (C) 2021 Asociación SUMAK <info (at) sumakcoop (dot) org
+
+ Sumak.me-django is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ Sumak.me-django is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Affero General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with Sumak.me-django.  If not, see <http://www.gnu.org/licenses/>.
+ {% endcomment %}
+{% load currency_filters %}
+{% load i18n %}
+
+<div class="basket-mini col-sm-5 text-right">
+    <strong>{% trans "Basket total:" %}</strong>
+    {% if request.basket.is_tax_known %}
+        {{ request.basket.total_incl_tax|currency:request.basket.currency }}
+    {% else %}
+        {{ request.basket.total_excl_tax|currency:request.basket.currency }}
+    {% endif %}
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='{% url 'basket:summary' %}';">{% trans "View basket" %}</button>
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        {% include "oscar/basket/partials/basket_quick.html" %}
+      </div>
+    </div>
+</div>
